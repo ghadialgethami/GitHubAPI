@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeVault | GitHub Repository Explorer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="brand">
+      <span class="logo">⌘</span>
+      <div>
+        <h2>CodeVault</h2>
+        <p>GitHub Repository Explorer</p>
+      </div>
+    </div>
+
+    <button id="themeBtn">🌙 Dark Mode</button>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <span class="tag">AJAX • API • DOM</span>
+        <h1>Discover GitHub repositories beautifully.</h1>
+        <p>
+          Enter any GitHub username to explore public repositories,
+          languages, stars, forks, and creation dates.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="circle"></div>
+        <h3>Live API Search</h3>
+        <p>Powered by GitHub Users API</p>
+      </div>
+    </section>
+
+    <section class="search-box">
+      <label for="usernameInput">GitHub Username</label>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="usernameInput"
+          placeholder="Enter GitHub username"
+        />
+        <button id="searchBtn">Search</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+
+      <small>Press Enter to search. Double-click a repository card to remove it.</small>
+    </section>
+
+    <p id="message"></p>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <section id="summary" class="summary"></section>
+
+    <section id="repoContainer" class="repo-container"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
